@@ -16,3 +16,5 @@ if __name__ == '__main__':
     print_hi('Sergei')
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+x = 5
