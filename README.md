@@ -1,1 +1,1 @@
-# qgis_python_sql2
+# qgis_python_sql
