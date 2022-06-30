@@ -23,3 +23,6 @@ gdf = gpd.GeoDataFrame(df, geometry=gpd.points_from_xy(df.location_longitude, df
 
 # Сохраняем в gpkg
 gdf.to_file('moscow.gpkg', driver='GPKG', layer='moscow')
+
+# Сохраняем в GeoJSON
+# gdf.to_file('dataframe.geojson', driver='GeoJSON')
