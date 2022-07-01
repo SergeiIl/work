@@ -22,7 +22,7 @@ df = pd.concat((pd.read_csv(f, index_col=None, header=0) for f in files))
 gdf = gpd.GeoDataFrame(df, geometry=gpd.points_from_xy(df.location_longitude, df.location_latitude), crs=wgs)
 
 # Сохраняем в gpkg
-gdf.to_file('moscow.gpkg', driver='GPKG', layer='moscow')
+gdf.to_file('all.gpkg', driver='GPKG', layer='all')
 
 # Сохраняем в GeoJSON
 # gdf.to_file('dataframe.geojson', driver='GeoJSON')

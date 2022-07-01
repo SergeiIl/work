@@ -6,7 +6,7 @@ import time
 
 # Загрузка данных из gpkg
 start_time = time.time()
-gpkg = gpd.read_file(r'moscow.gpkg', layer='moscow')
+gpkg = gpd.read_file(r'all.gpkg', layer='all_obj')
 
 end_time = time.time()
 print(f"It took {end_time-start_time:.2f} seconds to compute")
@@ -29,3 +29,4 @@ plt.show()
 
 end_time = time.time()
 print(f"It took {end_time-start_time:.2f} seconds to compute")
+
