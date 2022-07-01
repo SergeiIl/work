@@ -2,10 +2,14 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 import sqlite3 as sq
 import pandas as pd
+import time
 
 # Загрузка данных из gpkg
+start_time = time.time()
 gpkg = gpd.read_file(r'moscow.gpkg', layer='moscow')
 
+end_time = time.time()
+print(f"It took {end_time-start_time:.2f} seconds to compute")
 # Изменение формата на формат datatime
 gpkg['created_at'] = pd.to_datetime(gpkg['created_at'])
 # gpkg['week'] = gpkg['created_at'].dt.week
@@ -22,3 +26,6 @@ isna = gpkg.isna().sum()
 gpkg['created_at'].hist(bins=50, figsize=(16, 6))
 plt.title('Распределение кол-ва событий во времени')
 plt.show()
+
+end_time = time.time()
+print(f"It took {end_time-start_time:.2f} seconds to compute")
