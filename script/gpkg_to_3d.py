@@ -38,6 +38,6 @@ for i in range(gdf.shape[0]):
         # print(ddd_np)
 
         """Визуализация полигонов"""
-        # print(gdf.T[i]["t_from_contents"])  # информация из колонки таблицы
+        # plt.title(gdf.T[i]["t_from_contents"])  # информация из колонки таблицы
         # plt.plot(t_np[:, 0], t_np[:, 1])
         # plt.show()
